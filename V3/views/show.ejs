@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+
+<h1><%= campground.name %></h1>
+
+<img class = "thumbnail" src="<%= campground.image %>">
+
+<p><%= campground.description  %></p>
+
+<p> <%campground.comments.forEach(function(comment){ %>
+    <p>
+        <strong><%=comment.author%></strong> - <%=comment.text%>
+    </p>
+<% }) %>
+</p>
+
+<%- include("partials/footer") %>
